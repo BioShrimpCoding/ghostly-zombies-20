@@ -1,4 +1,4 @@
- 
+ The controls to play SpaceBar is to shoot,W,A,s,D to move and B to heal
 
 
 > Open this page at [https://bioshrimpcoding.github.io/ghostly-zombies-20/](https://bioshrimpcoding.github.io/ghostly-zombies-20/)
