@@ -1,0 +1,45 @@
+{
+    "name": "Ghostly Zombie's 2.0",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
+        "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1",
+        "animation": "*",
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2",
+        "multiplayer": "*",
+        "darts": "*",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.2.1",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0",
+        "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24",
+        "Makey Makey Keymappings": "github:joylabz/makeymakey-makecode-arcade-extension#1.0.3",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v1.12.41",
+        "tag": "v1.12.41",
+        "commits": "https://github.com/microsoft/pxt-arcade/commits/58673437825ecb93a220c8f58a6f9bb5693896ba",
+        "target": "1.12.46",
+        "pxt": "8.5.52",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
+}
