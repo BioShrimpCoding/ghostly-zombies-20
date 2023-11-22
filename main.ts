@@ -122,15 +122,15 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 function LevelUp () {
     blockSettings.writeNumber("Played", 0)
     if (CharacterCustom == 1) {
-        Xp_per_Level = Xp_per_Level + 50
+        Xp_per_Level += 50
         P1Level += 1
         ExpP1 = 0
     } else if (CharacterCustom == 2) {
-        Xp_per_Level = Xp_per_Level + 50
+        Xp_per_Level = 50
         P2Level += 1
         ExpP2 = 0
-    } else {
-        Xp_per_Level = Xp_per_Level + 50
+    } else if (CharacterCustom == 3) {
+        Xp_per_Level = 50
         P3Level += 1
         ExpP3 = 0
     }
@@ -806,12 +806,13 @@ CharacterCustom = game.askForNumber("Character selection 1-3", 1)
 level = game.askForNumber("Difficulty select, 1-3", 1)
 map = level
 Rounds = 1
-story.printCharacterText("Charater 1 Level: " + ("" + P1Level + (" Charater 1 XP: " + ("" + ExpP1 + "/" + Xp_per_Level))))
-pause(2000)
-story.printCharacterText("Charater 2 level: " + ("" + P2Level + (" Charater 2 XP:" + ("" + ExpP2 + "/200"))))
-pause(2000)
-story.printCharacterText("Charater 3 level: " + ("" + P3Level + (" Charater 3 XP:" + ("" + ExpP3 + "/200"))))
-pause(2000)
+if (CharacterCustom == 1) {
+    story.printCharacterText("Charater 1 Level: " + ("" + P1Level + (" Charater 1 XP: " + ("" + ExpP1 + "/" + Xp_per_Level))))
+} else if (CharacterCustom == 2) {
+    story.printCharacterText("Charater 2 level: " + ("" + P2Level + (" Charater 2 XP:" + ("" + ExpP2 + "/200"))))
+} else if (CharacterCustom == 3) {
+    story.printCharacterText("Charater 3 level: " + ("" + P3Level + (" Charater 3 XP:" + ("" + ExpP3 + "/200"))))
+}
 if (CharacterCustom == 1) {
     mySprite = sprites.create(img`
         . . . . . f f f f . . . . . 
@@ -1329,17 +1330,6 @@ forever(function () {
     100,
     characterAnimations.rule(Predicate.MovingRight)
     )
-})
-forever(function () {
-    if (ExpP1 == Xp_per_Level) {
-        LevelUp()
-    }
-    if (ExpP2 == Xp_per_Level) {
-        LevelUp()
-    }
-    if (ExpP3 == Xp_per_Level) {
-        LevelUp()
-    }
 })
 forever(function () {
     characterAnimations.loopFrames(
@@ -2162,6 +2152,17 @@ forever(function () {
     100,
     characterAnimations.rule(Predicate.NotMoving)
     )
+})
+forever(function () {
+    if (ExpP1 == Xp_per_Level) {
+        LevelUp()
+    }
+    if (ExpP2 == Xp_per_Level) {
+        LevelUp()
+    }
+    if (ExpP3 == Xp_per_Level) {
+        LevelUp()
+    }
 })
 forever(function () {
     multiplier_price = map + 1
