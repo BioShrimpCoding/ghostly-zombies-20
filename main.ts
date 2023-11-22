@@ -810,7 +810,7 @@ story.printCharacterText("Charater 1 Level: " + ("" + P1Level + (" Charater 1 XP
 pause(2000)
 story.printCharacterText("Charater 2 level: " + ("" + P2Level + (" Charater 2 XP:" + ("" + ExpP2 + "/200"))))
 pause(2000)
-story.printCharacterText("CHarater 3 level: " + ("" + P3Level + (" Charater 3 XP:" + ("" + ExpP3 + "/200"))))
+story.printCharacterText("Charater 3 level: " + ("" + P3Level + (" Charater 3 XP:" + ("" + ExpP3 + "/200"))))
 pause(2000)
 if (CharacterCustom == 1) {
     mySprite = sprites.create(img`
